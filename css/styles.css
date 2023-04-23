@@ -19,10 +19,30 @@ body, html, figure, a, h3, h4 {
     text-decoration: none;
 }
 
-.nav-menu {
-    background-color: var(--primary-color);
+main {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: var(--primary-color);  
+    box-shadow: 0px 2px 4px rgb(75, 75, 75);
+}
+
+input[type=checkbox] {
+    accent-color: var(--gray-color);
+    mix-blend-mode: multiply;
+}
+
+input[type=radio] {
+    accent-color: var(--gray-color);
+    mix-blend-mode: multiply;
+}
+
+.nav-menu {
     justify-content: space-between;
+    display: flex;
     padding: 0 10px;
 }
 
@@ -32,7 +52,7 @@ body, html, figure, a, h3, h4 {
 
 .nav-menu a { 
     color: var(--white-color);
-    margin-right: 29px;     
+    margin-right: 29px;    
 }
 
 .nav {
@@ -42,7 +62,7 @@ body, html, figure, a, h3, h4 {
 
 .nav-profile {
     display: flex;
-    align-items: center;  
+    align-items: center;
 }
 
 .nav-profile img {    
@@ -51,14 +71,11 @@ body, html, figure, a, h3, h4 {
 }
 
 .nav-list {
-    display: flex;
-    list-style-type: none;
-    padding: 0; 
+    display: none;
 }
 
 #news {
-    background-color: var(--white-color); 
-    margin-bottom: 28px;
+    margin-bottom: 28px;   
 }
 
 .news-div {
@@ -72,14 +89,20 @@ body, html, figure, a, h3, h4 {
     font-weight: 700; 
 }
 
-.news--card a{
-    font-size: 16px; 
+.news--card a {
+    font-size: 16px;
 }
 
 #news h4 {
     margin-top: 4px;
     font-size: 12px;
     font-weight: 700; 
+}
+
+hr {
+    height: 1px;
+    border: none; 
+    background-color: #38AF90;
 }
 
 div .news-date {
@@ -95,7 +118,7 @@ div .news-date {
 
 #news span {
     font-size: 14px;
-    margin: 7px 0 12px;
+    padding: 7px 0 12px;
 }
 
 .primary{
@@ -112,10 +135,11 @@ div .news-date {
 .news--card {
     background-color: var(--soft-gray-color);
     width: 300px;
-    height: 520px;
-    margin: 0 10px 28px;
+    height: 493px;
+    margin-bottom: 28px;
     padding: 16px 12px 12px;
-    border-radius: 8px; 
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px #b1b1b1; 
 }
 
 button {
@@ -134,13 +158,20 @@ button {
     border: 2px solid var(--secondary-color);
 }
 
-#games {
+.background{
     background-color: var(--soft-gray-color);
     padding: 40px 0;
+    width: 100%;
+}
+
+#games {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #games h2 {
-    justify-content: center;
+    margin: 0px;  
 }
 
 .games--card {
@@ -148,7 +179,8 @@ button {
     height: 326px;
     width: 300px;
     border-radius: 8px;
-    margin: 28px 10px 0;
+    margin-top: 28px;
+    box-shadow: 3px 3px 11px #b1b1b1;
 }
 
 .games--card img {
@@ -182,4 +214,210 @@ button {
     justify-content: center;
     font-size: 36px;
     padding-bottom: 15px;
+}
+
+.signUp--card {
+    height: 603px;
+    padding: 0 12px;
+}
+
+#signUp h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.field {
+    height: 50px;
+    width: 280px;
+    margin: 0 0 20px;
+    border: 1px solid var(--gray-color);
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 13px 22px;
+    font-weight: 400;
+
+}
+
+.signUp-favorite {
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+}
+
+.favorite {
+    height: 23px;
+    width: 23px;
+    padding-left: 7px;
+    margin: 0 7px 0 8px;
+    
+}
+
+.checkbox {
+    padding-top: 36px;
+}
+
+.form {
+    padding-top: 52px;
+}
+
+.form .with-white {
+    margin-top: 20px;
+}
+
+.form button {
+    margin-top: 48px;  
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    background-color: var(--dark-gray-color);
+    color: var(--white-color);
+    padding: 28px 20px;
+}
+
+.footer {  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer div {
+    padding-bottom: 37px;
+}
+
+.footer a {
+    display: block;
+    align-items: center;
+    color: var(--white-color);
+}
+
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.footer-rights {
+    padding-bottom: 37px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media(min-width: 576px) {
+}
+
+@media(min-width: 1200px) {
+    
+    h2 {
+        font-size: 36px;
+    }
+    
+    h3 {
+        font-size: 24px;
+    }
+    
+    .nav-menu {
+        max-width: 59%;
+        margin: 0 auto;
+    }
+    
+    .nav-list {
+        display: flex;
+        list-style-type: none;
+        padding: 0; 
+    }
+    
+    #news {
+    /*    max-width: 85.4%;   */
+        max-width: 59%;   
+    }
+
+    .news--card {    
+        height: 247px;
+        width: 100%;
+    /*    max-width: 1200px; */
+        padding: 16px 40px;
+        margin-bottom: 40px;
+    }
+    
+
+    .news-div h2 {
+        font-size: 36px;
+        margin: 40px 0;
+    }
+    
+    .news--card a{
+        font-size: 24px; 
+    }
+
+    #news h4 {
+        margin: 5px 0;
+        font-size: 16px;   
+    }
+
+    #news p {
+        margin-top: 16px;
+    }
+
+    .games--container {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+    }
+    
+    #games {
+        max-width: 81.5%;
+        margin: 0 auto;
+    }
+
+    .games--card {
+        margin: 73px 30px 30px 0;
+    }
+
+    #games h2 {
+        font-size: 36px;
+    }
+
+    .signUp--card {
+        height: 522px;
+        width: 790px;
+        padding: 0 72px 0;
+        margin-bottom: 61px;
+        box-shadow: 0px 3px 5px #b1b1b1;
+    }
+
+    .field {
+        width: 642px;
+    }
+
+    .button {
+        flex-direction: inherit;
+        justify-content: center;      
+    }
+
+    .form button {
+        margin-top: 39px;
+    }
+
+    .form .with-white {
+        margin: 39px 0 0 52px;
+    }
+    
+    .footer {
+        padding: 2.2% 0;
+        max-width: 71%;
+        margin: 0 auto;
+        flex-direction: inherit;
+        justify-content: space-around;
+    }
+
+    span .register {
+        display: inline;
+    }
 }
